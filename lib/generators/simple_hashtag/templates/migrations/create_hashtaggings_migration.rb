@@ -6,6 +6,6 @@ class CreateSimpleHashtagHashtaggings < ActiveRecord::Migration
       t.references :hashtaggable, :polymorphic => true
     end
     add_index :simple_hashtag_hashtaggings, ["hashtaggable_id", "hashtaggable_type"],
-              :name => 'index_hashtaggings_hashtaggable_id_hashtaggable_type'
+              :name => 'idx_tagging_id_hashtaggable_type'
   end
 end
